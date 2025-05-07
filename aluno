@@ -1,0 +1,72 @@
+public class Aluno {
+    
+    private int matricula;
+    private String nome;
+    private String curso;
+    private int anoIngresso;
+    private int qtdeDisciplinas;
+    private String situacao;
+
+    
+    public Aluno(int pMatricula, String pNome, String pCurso, int pAnoIngresso) {
+        this.matricula = pMatricula;
+        this.nome = pNome;
+        this.curso = pCurso;
+        this.anoIngresso = pAnoIngresso;
+        this.qtdeDisciplinas = 0;
+        this.situacao = "Não Matriculado";
+    }
+
+    
+    public int getMatricula() {
+        return matricula;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public String getCurso() {
+        return curso;
+    }
+
+    public int getAnoIngresso() {
+        return anoIngresso;
+    }
+
+    public int getQtdeDisciplinas() {
+        return qtdeDisciplinas;
+    }
+
+    public String getSituacao() {
+        return situacao;
+    }
+
+    
+    public void setMatricula(int matricula) {
+        this.matricula = matricula;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setCurso(String curso) {
+        this.curso = curso;
+    }
+
+    public void setAnoIngresso(int anoIngresso) {
+        this.anoIngresso = anoIngresso;
+    }
+
+    public void setQtdeDisciplinas(int qtde) {
+        this.qtdeDisciplinas = qtde;
+
+        
+        if (qtde > 0) {
+            this.situacao = "Matriculado";
+        } else {
+            this.situacao = "Não Matriculado";
+        }
+    }
+}
